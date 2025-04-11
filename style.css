@@ -1,0 +1,325 @@
+/* Cores e Tipografia */
+:root {
+  --primary-color: #2C3E50;    /* Azul-marinho */
+  --secondary-color: #f7f7f7;  /* Cinza claro para fundos alternados */
+  --text-color: #333333;       /* Cinza escuro para texto */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Cabeçalhos e textos importantes em serif */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Libre Baskerville', serif;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 1.3em;
+  font-weight: 700;
+  margin: 0.5em 0;
+}
+
+h4, h5, h6 {
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+/* Navegação */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #cccccc;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.5em 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 1em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9em;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Seção Início (Intro) */
+.intro {
+  background: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.intro h1 {
+  font-size: 3em;
+}
+
+.intro h2 {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+.intro .tagline {
+  font-style: italic;
+  font-family: 'Lato', sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.2em;
+}
+
+/* Seções gerais */
+section {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.alt-section {
+  background: var(--secondary-color);
+}
+
+/* Seção Sobre Mim */
+#sobre p {
+  text-align: justify;
+}
+
+/* Seção Competências */
+.skills {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5em;
+}
+
+.skills li {
+  text-align: center;
+  background: #ffffff;
+  padding: 20px 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+}
+
+.skills i {
+  font-size: 1.5em;
+  color: var(--primary-color);
+  margin-bottom: 0.3em;
+}
+
+.skills span {
+  display: block;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-top: 0.2em;
+}
+
+/* Seção Experiência (Timeline) */
+.timeline {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 2px;
+  height: 100%;
+  background: #cccccc;
+}
+
+.timeline li {
+  position: relative;
+  padding: 0 0 20px 50px;
+  /* margin-bottom: 20px; */
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  top: 0.8em;
+  left: 11px;
+  width: 18px;
+  height: 18px;
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 0.9em;
+}
+
+.timeline-desc {
+  margin-top: 0.3em;
+  font-size: 0.95em;
+  color: #555555;
+}
+
+/* Seção Projeto Destaque */
+#projeto h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-top: 0.2em;
+  display: flex;
+  align-items: center;
+}
+
+#projeto h3 i {
+  color: var(--primary-color);
+  margin-right: 0.5em;
+}
+
+#projeto p {
+  text-align: justify;
+}
+
+/* Seção Certificações */
+.certifications {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.certifications li {
+  margin-bottom: 0.5em;
+  font-size: 1em;
+}
+
+.certifications i {
+  color: var(--primary-color);
+  margin-right: 0.5em;
+}
+
+/* Seção Contato */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-links li {
+  margin-bottom: 0.5em;
+  font-size: 1em;
+}
+
+.contact-links i {
+  color: var(--primary-color);
+  width: 20px;
+}
+
+.contact-links a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
+
+/* Formulário de Contato */
+.contact-form form {
+  max-width: 500px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.2em;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 1em;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.95em;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form input[type="submit"] {
+  background: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+.contact-form input[type="submit"]:hover {
+  background: #1A2A40;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .contact-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .contact-info {
+    flex: 1;
+  }
+  .contact-form {
+    flex: 2;
+  }
+}
